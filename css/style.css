@@ -1,0 +1,138 @@
+:root {
+  --navy: #14284b;
+  --navy-deep: #0e1d38;
+  --blue: #4f74f2;
+  --blue-soft: #e8eefc;
+  --text: #1c2b4a;
+  --muted: #6b778c;
+  --page: #f1f5fb;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--page);
+}
+
+/* ---------- Navbar ---------- */
+.site-nav { background: var(--navy); }
+.site-nav .navbar-brand { color: #fff; font-weight: 700; font-size: 1rem; }
+.site-nav .nav-link,
+.site-nav .dropdown-toggle { color: #fff; font-size: .85rem; }
+.site-nav .nav-link:hover { color: #cfd9f5; }
+
+/* ---------- Hero carousel ---------- */
+.hero .carousel-item { height: 420px; }
+.hero .carousel-item img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.hero .carousel-item::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(14,29,56,.88) 0%, rgba(14,29,56,.55) 55%, rgba(14,29,56,.25) 100%);
+}
+.hero .hero-caption {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; align-items: center;
+}
+.hero .hero-caption .inner { max-width: 520px; color: #fff; }
+.hero .kicker { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.1; margin: .5rem 0 .9rem; }
+.hero p { font-size: .9rem; color: #e4eaf8; }
+.btn-brand {
+  background: var(--blue); color: #fff; border: 0;
+  border-radius: 999px; padding: .5rem 1.4rem; font-weight: 600; font-size: .85rem;
+}
+.btn-brand:hover { background: #3d61dc; color: #fff; }
+.hero .carousel-indicators [data-bs-target] { width: 22px; height: 3px; }
+
+/* ---------- Goal section ---------- */
+.goal-section { background: linear-gradient(180deg, #f7f9ff, #eaf0fd); padding: 4rem 0; }
+.goal-img { width: 100%; border-radius: 18px; box-shadow: 0 14px 30px rgba(20,40,75,.25); }
+.eyebrow { color: var(--blue); font-weight: 700; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.goal-section h2 { font-weight: 800; color: var(--navy); }
+.goal-section .lead-text { color: var(--muted); font-size: .9rem; }
+.feature-card {
+  background: #fff; border-radius: 12px; padding: 1rem;
+  box-shadow: 0 4px 14px rgba(20,40,75,.08); height: 100%;
+  transition: transform .2s, box-shadow .2s;
+}
+.feature-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(20,40,75,.14); }
+.feature-icon {
+  width: 34px; height: 34px; border-radius: 9px; background: var(--blue-soft);
+  display: grid; place-items: center; font-size: 1rem; margin-bottom: .6rem;
+}
+.feature-card h6 { font-weight: 700; margin-bottom: .2rem; color: var(--navy); }
+.feature-card p { font-size: .75rem; color: var(--muted); margin: 0; }
+
+/* ---------- CTA + footer ---------- */
+.cta-section { background: #f7f9ff; text-align: center; padding: 3rem 0; }
+.cta-section h3 { font-weight: 800; color: var(--navy); }
+.cta-section p { color: var(--muted); font-size: .85rem; }
+.site-footer { background: var(--navy); color: #fff; text-align: center; padding: 1.1rem 0; font-size: .75rem; }
+
+/* ---------- Login ---------- */
+.login-page {
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #f4f7ff 0%, #e6eafc 100%); padding: 2rem 1rem;
+}
+.login-logo {
+  width: 40px; height: 40px; border-radius: 10px; color: #fff; font-weight: 800;
+  background: linear-gradient(135deg, #5b3fe0, #7a2fe0);
+  display: grid; place-items: center; margin: 0 auto .8rem;
+}
+.login-card {
+  width: 100%; max-width: 330px; background: #fff; border-radius: 16px;
+  padding: 1.5rem; box-shadow: 0 16px 40px rgba(60,60,140,.15);
+}
+.login-card h5 { font-weight: 800; }
+.login-card .form-label { font-size: .72rem; font-weight: 700; margin-bottom: .25rem; }
+.login-card .form-control { font-size: .8rem; border-radius: 8px; }
+.login-card .form-control:focus { border-color: #7b5cf0; box-shadow: 0 0 0 .2rem rgba(123,92,240,.2); }
+.login-card .link-sm { font-size: .7rem; font-weight: 600; color: #5b3fe0; text-decoration: none; }
+.btn-signin {
+  width: 100%; border: 0; color: #fff; font-weight: 700; font-size: .85rem; border-radius: 9px; padding: .6rem;
+  background: linear-gradient(90deg, #4f35d8, #7a2fe0);
+}
+.btn-signin:hover { filter: brightness(1.1); color: #fff; }
+.password-wrap { position: relative; }
+.password-wrap .toggle-pw {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font-size: .7rem; font-weight: 600; color: #5b3fe0; background: none; border: 0;
+}
+
+/* ---------- Home / courses ---------- */
+.welcome-box {
+  background: linear-gradient(135deg, #dde7fb, #f8faff); border-radius: 12px;
+  text-align: center; padding: 1.6rem 1rem; box-shadow: 0 4px 12px rgba(20,40,75,.08);
+}
+.welcome-box h2 { font-weight: 800; color: var(--navy); }
+.course-card {
+  border-radius: 8px; padding: 1.1rem 1.2rem; border-left: 4px solid; height: 100%;
+  box-shadow: 0 4px 14px rgba(20,40,75,.08);
+  transition: transform .2s, box-shadow .2s;
+}
+.course-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(20,40,75,.14); }
+.course-card h4 { font-weight: 800; }
+.course-card p { font-size: .78rem; color: #333; }
+.course-card .btn { font-size: .75rem; color: #fff; border: 0; padding: .35rem .8rem; }
+.course-html { background: #fdebe3; border-color: #d9622b; }
+.course-html h4 { color: #b5451a; }
+.course-html .btn { background: #d9622b; }
+.course-css { background: #e6f1fc; border-color: #2f7bd0; }
+.course-css h4 { color: #1f62b0; }
+.course-css .btn { background: #2f7bd0; }
+.course-bootstrap { background: #eee6fb; border-color: #7a46b5; }
+.course-bootstrap h4 { color: #5f2f96; }
+.course-bootstrap .btn { background: #7a46b5; }
+.course-js { background: #fbf5d5; border-color: #d0a400; }
+.course-js h4 { color: #8a6d00; }
+.course-js .btn { background: #b08d00; }
+
+@media (max-width: 576px) {
+  .hero .carousel-item { height: 360px; }
+  .hero h1 { font-size: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feature-card, .course-card { transition: none; }
+}
